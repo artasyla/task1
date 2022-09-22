@@ -55,19 +55,14 @@
            <label for="Tiramisu with fruits">Tiramisu with fruits</label>
             
            <h3>Choose size</h3>
-           <input type="radio" name="size"
-           value="small" id="small" />
-           <label for="small">small</label>
-           <br>
-           <input type="radio" name="size"
-           value="medium" id="medium" />
-           
-           <label for="radio">medium</label>
-  
-           <br>
-           <input type="radio" name="size"
-           value="large" id="large" />
-           <label for="large">large</label>
+           <label for="size">Choose a size</label>
+            <select name="size" id="size select">
+              <option value="">--please choose an option</option>
+              <option value="small">small</option>
+              <option value="medium">medium</option>
+              <option value="large">large</option>
+            </select>
+
   
           <br>
           <br>
@@ -101,8 +96,12 @@
            <input  type="text" placeholder="State" id="state" name="state"  value="" required > <br> <br>
            <input  type="text" placeholder="Postal/Zip Code" id="postal" name="postal" value="" required> <br><br>
   
-            <label>Phone Number</label> <br>
-  
+            
+
+            <label for="imageFile">Upload a photo of how do you want your cake to look:</label>
+  <input type="file" id="imageFile" capture="user" accept="image/*" />
+</p>
+  <label>Phone Number</label> <br>
             <input type="tel" placeholder="Area Code" id="areanumber" name="areanumber" value=""  maxlength="5" required>
             <input  type="tel" placeholder="Phone Number" id="phonemuber" name="phonenumber" value="" maxlength="9" required> <br><br>
               
@@ -110,15 +109,19 @@
             <label>Date required</label> <br>
             <input type="datetime-local" id="date" name="date" value="" required> <br> <br>
 
+            payment method
        <input list="payment" />
             <datalist id="payment" >
                 <option value="Online"> Online</option>
                 <option value="Cash">Cash</option>
             <option value="via POSS"> via POSS</option> 
-            </datalist>         
+            </datalist>    <br>
+                 
 
             <input type="submit" value="Submit" >
 
+
+            
             </form>
   
       </fieldset>
